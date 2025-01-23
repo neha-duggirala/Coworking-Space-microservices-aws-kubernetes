@@ -1,5 +1,5 @@
 
-FROM python:3.9.19-slim
+FROM public.ecr.aws/docker/library/python:3.9-slim
 
 # Set up an app directory for your code
 COPY . /app
@@ -17,5 +17,4 @@ ENV DB_HOST=127.0.0.1
 ENV DB_PORT=5433
 ENV DB_NAME=mydatabase
 
-# 
 CMD ["python", "app.py"]
