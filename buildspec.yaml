@@ -8,7 +8,7 @@ phases:
   build:
     commands:
       - echo Building the Docker image...
-      - docker build -t coworking .
+      - docker build -t coworking ./analytics
       - echo Tagging the Docker image...
       - docker tag coworking-analytics:latest $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/coworking:$CODEBUILD_BUILD_NUMBER
   post_build:
