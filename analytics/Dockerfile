@@ -9,7 +9,7 @@ COPY . .
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-EXPOSE 5000
+EXPOSE 5153
 
 ENV DB_USERNAME=myuser
 ENV DB_PASSWORD=mypassword
