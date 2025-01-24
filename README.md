@@ -1,7 +1,13 @@
 # Coworking Space Service Extension
-The Coworking Space Service is a set of APIs that enables users to request one-time tokens and administrators to authorize access to a coworking space. This service follows a microservice pattern and the APIs are split into distinct services that can be deployed and managed independently of one another.
+This project provides an API for business analysts to access basic analytics on user activity in a coworking space. The API is built as a microservice and deployed on Kubernetes. As a DevOps engineer, your task is to set up a deployment pipeline for the application.
 
-For this project, you are a DevOps engineer who will be collaborating with a team that is building an API for business analysts. The API provides business analysts basic analytics data on user activity in the service. The application they provide you functions as expected locally and you are expected to help build a pipeline to deploy it in Kubernetes.
+## Key Features
+
+- Token-based access control: Users can request one-time tokens, and administrators can authorize access.
+
+- Analytics API: Provides data on user activity, such as daily check-ins and user visits.
+
+- Microservice architecture: APIs are split into independent services for easier deployment and management.
 
 ## Getting Started
 
@@ -108,24 +114,14 @@ The benefit here is that it's explicitly set. However, note that the `DB_PASSWOR
 5. Check AWS CloudWatch for application logs
 
 ### Deliverables
-1. `Dockerfile`
-2. Screenshot of AWS CodeBuild pipeline
-3. Screenshot of AWS ECR repository for the application's repository
-4. Screenshot of `kubectl get svc`
-5. Screenshot of `kubectl get pods`
-6. Screenshot of `kubectl describe svc <DATABASE_SERVICE_NAME>`
-7. Screenshot of `kubectl describe deployment <SERVICE_NAME>`
-8. All Kubernetes config files used for deployment (ie YAML files)
-9. Screenshot of AWS CloudWatch logs for the application
-10. `README.md` file in your solution that serves as documentation for your user to detail how your deployment process works and how the user can deploy changes. The details should not simply rehash what you have done on a step by step basis. Instead, it should help an experienced software developer understand the technologies and tools in the build and deploy process as well as provide them insight into how they would release new builds.
-
+1. `Dockerfile` in analytics folder
+2. All the screenshots are available in screenshots folder
+3. All Kubernetes config files used for deployment (ie YAML files)
+4. `README.md` 
 
 ### Stand Out Suggestions
-Please provide up to 3 sentences for each suggestion. Additional content in your submission from the standout suggestions do _not_ impact the length of your total submission.
-1. Specify reasonable Memory and CPU allocation in the Kubernetes deployment configuration
-2. In your README, specify what AWS instance type would be best used for the application? Why?
-3. In your README, provide your thoughts on how we can save on costs?
+#### Cost Optimization Tips
+- Use spot instances for non-critical workloads.
+- Scale down resources during off-peak hours.
+- Monitor resource usage with CloudWatch to identify inefficiencies.
 
-### Best Practices
-* Dockerfile uses an appropriate base image for the application being deployed. Complex commands in the Dockerfile include a comment describing what it is doing.
-* The Docker images use semantic versioning with three numbers separated by dots, e.g. `1.2.1` and  versioning is visible in the  screenshot. See [Semantic Versioning](https://semver.org/) for more details.
