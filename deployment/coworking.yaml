@@ -46,11 +46,11 @@ spec:
           timeoutSeconds: 5
         envFrom:
         - configMapRef:
-            name: coworking-map
+            name: coworking-env
         env:
         - name: DB_PASSWORD
           valueFrom:
             secretKeyRef:
-              name: mypassword
+              name: db-secret
               key: DB_PASSWORD
       restartPolicy: Always
