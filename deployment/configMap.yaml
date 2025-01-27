@@ -14,4 +14,4 @@ metadata:
   name: db-secret
 type: Opaque
 data:
-  DB_PASSWORD: bXlwYXNzd29yZA==
+  POSTGRES_PASSWORD: cnVrcExhdlpSTwo=
