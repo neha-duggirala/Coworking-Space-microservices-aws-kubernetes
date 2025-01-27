@@ -4,7 +4,7 @@ metadata:
   name: coworking-env
 data:
   DB_USERNAME: myuser
-  DB_HOST: 127.0.0.1
+  DB_HOST: 10.100.214.189
   DB_PORT: '5432'
   DB_NAME: mydatabase
 ---
