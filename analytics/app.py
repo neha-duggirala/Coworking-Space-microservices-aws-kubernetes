@@ -77,9 +77,9 @@ def all_user_visits():
     return jsonify(response)
 
 
-# scheduler = BackgroundScheduler()
-# job = scheduler.add_job(get_daily_visits, 'interval', seconds=30)
-# scheduler.start()
+scheduler = BackgroundScheduler()
+job = scheduler.add_job(get_daily_visits, 'interval', seconds=30)
+scheduler.start()
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=port_number)
